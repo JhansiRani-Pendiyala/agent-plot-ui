@@ -60,7 +60,8 @@ def extract_sql_query(llm_response: str) -> str:
         if end != -1:
             return llm_response[start+6:end].strip()
     return llm_response.strip()
-
+    
+# Load all schema for system prompt
 def load_all_schema_contexts() -> str:
     schema_files = SCHEMA_DIR.glob("*.txt")
     contexts = []
