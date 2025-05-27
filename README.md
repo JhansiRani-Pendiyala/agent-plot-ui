@@ -1,9 +1,15 @@
 ***Backend 
+
     pip install -r requirements.txt
+    
     uvicorn main:app --reload --host 0.0.0.0 --port 8080
+    
 FrontEnd
+
     cd frontend
+    
     pip install -r requirements.txt
+    
     python app.py
     
  Request Payload to test from postman 
