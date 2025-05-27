@@ -27,9 +27,9 @@ prompts to load the dahsboard -
      provide total sales by each employee
      all employee details along with the total products sold by each emaploye 
 
-Dashboard
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/5ce3eb0d-a2f9-4cd1-b0a9-3c3df48c88ae" />
 
-    <img width="1440" alt="image" src="https://github.com/user-attachments/assets/67bdd7cb-861d-44ca-b032-29df04edb0ab" />
+
 
 
 
