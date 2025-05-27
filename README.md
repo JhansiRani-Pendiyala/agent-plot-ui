@@ -22,7 +22,7 @@ FrontEnd
     }'
 
 
-promts to load the dahsboard - 
+prompts to load the dahsboard - 
 
      provide total sales by each employee
      all employee details along with the total products sold by each emaploye 
