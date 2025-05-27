@@ -3,6 +3,9 @@
     pip install -r requirements.txt
     
     uvicorn main:app --reload --host 0.0.0.0 --port 8080
+
+    Create Postgres connection and update the config.json
+    create open API key and add into config.json file
     
 FrontEnd
 
