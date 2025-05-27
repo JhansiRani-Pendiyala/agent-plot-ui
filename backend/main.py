@@ -48,8 +48,10 @@ SCHEMA_DIR = Path(__file__).parent / "schemas"
 # DB connection pool
 db_pool = None
 
+
 class QueryRequest(BaseModel):
     query: str
+
 
 def extract_sql_query(llm_response: str) -> str:
     if not llm_response:
@@ -60,6 +62,7 @@ def extract_sql_query(llm_response: str) -> str:
         if end != -1:
             return llm_response[start+6:end].strip()
     return llm_response.strip()
+
 
 def load_all_schema_contexts() -> str:
     schema_files = SCHEMA_DIR.glob("*.txt")
@@ -74,6 +77,7 @@ def load_all_schema_contexts() -> str:
     combined = "\n\n".join(contexts)
     logger.info(f"Loaded {len(contexts)} schema files.")
     return combined
+
 
 @app.on_event("startup")
 def startup_event():
@@ -93,12 +97,14 @@ def startup_event():
         logger.exception("Failed to create DB pool on startup.")
         raise
 
+
 @app.on_event("shutdown")
 def shutdown_event():
     global db_pool
     if db_pool:
         db_pool.closeall()
         logger.info("Database connections closed on shutdown.")
+
 
 @app.post("/api/query")
 def generate_and_execute(request: QueryRequest):
@@ -108,8 +114,10 @@ def generate_and_execute(request: QueryRequest):
     schema_context = load_all_schema_contexts()
 
     system_prompt = (
-        "You are a helpful assistant that generates one valid PostgreSQL SQL query "
-        "based on the schema and user request. " + schema_context
+        (
+            "You are a helpful assistant that generates one valid PostgreSQL SQL query "
+            "based on the schema and user request. "
+        ) + schema_context
     )
 
     full_prompt = f"Generate a single SQL query for this request: {user_prompt}"
@@ -131,11 +139,13 @@ def generate_and_execute(request: QueryRequest):
     }
 
     try:
-        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=data)
+        response = requests.post(
+            "https://api.openai.com/v1/chat/completions", headers=headers, json=data)
         response.raise_for_status()
     except requests.RequestException as e:
         logger.error(f"OpenAI API request failed: {e}")
-        raise HTTPException(status_code=500, detail="OpenAI API request failed")
+        raise HTTPException(
+            status_code=500, detail="OpenAI API request failed")
 
     body = response.json()
     sql_query = extract_sql_query(body["choices"][0]["message"]["content"])
@@ -143,13 +153,15 @@ def generate_and_execute(request: QueryRequest):
 
     if not sql_query.lower().startswith("select"):
         logger.warning("Generated SQL is not a SELECT statement.")
-        raise HTTPException(status_code=400, detail="Only SELECT statements are allowed.")
+        raise HTTPException(
+            status_code=400, detail="Only SELECT statements are allowed.")
 
     try:
         conn = db_pool.getconn()
         cur = conn.cursor()
         cur.execute(sql_query)
-        columns = [desc[0] for desc in cur.description] if cur.description else []
+        columns = [desc[0]
+                   for desc in cur.description] if cur.description else []
         rows = cur.fetchall() if cur.description else []
         cur.close()
         db_pool.putconn(conn)
@@ -158,7 +170,8 @@ def generate_and_execute(request: QueryRequest):
 
         results = []
         for row in rows:
-            row_dict = {col: (list(val) if isinstance(val, (list, tuple)) else val) for col, val in zip(columns, row)}
+            row_dict = {col: (list(val) if isinstance(
+                val, (list, tuple)) else val) for col, val in zip(columns, row)}
             results.append(row_dict)
 
         return results
@@ -166,15 +179,7 @@ def generate_and_execute(request: QueryRequest):
     except Exception as e:
         logger.exception("Database query failed.")
         raise HTTPException(status_code=400, detail=str(e))
-import json
-import psycopg2
-from psycopg2 import pool
-from pathlib import Path
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-import requests
-import logging
+
 
 app = FastAPI()
 
@@ -216,8 +221,10 @@ SCHEMA_DIR = Path(__file__).parent / "schemas"
 # DB connection pool
 db_pool = None
 
+
 class QueryRequest(BaseModel):
     query: str
+
 
 def extract_sql_query(llm_response: str) -> str:
     if not llm_response:
@@ -228,6 +235,7 @@ def extract_sql_query(llm_response: str) -> str:
         if end != -1:
             return llm_response[start+6:end].strip()
     return llm_response.strip()
+
 
 def load_all_schema_contexts() -> str:
     schema_files = SCHEMA_DIR.glob("*.txt")
@@ -242,6 +250,7 @@ def load_all_schema_contexts() -> str:
     combined = "\n\n".join(contexts)
     logger.info(f"Loaded {len(contexts)} schema files.")
     return combined
+
 
 @app.on_event("startup")
 def startup_event():
@@ -261,12 +270,14 @@ def startup_event():
         logger.exception("Failed to create DB pool on startup.")
         raise
 
+
 @app.on_event("shutdown")
 def shutdown_event():
     global db_pool
     if db_pool:
         db_pool.closeall()
         logger.info("Database connections closed on shutdown.")
+
 
 @app.post("/api/query")
 def generate_and_execute(request: QueryRequest):
@@ -299,11 +310,13 @@ def generate_and_execute(request: QueryRequest):
     }
 
     try:
-        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=data)
+        response = requests.post(
+            "https://api.openai.com/v1/chat/completions", headers=headers, json=data)
         response.raise_for_status()
     except requests.RequestException as e:
         logger.error(f"OpenAI API request failed: {e}")
-        raise HTTPException(status_code=500, detail="OpenAI API request failed")
+        raise HTTPException(
+            status_code=500, detail="OpenAI API request failed")
 
     body = response.json()
     sql_query = extract_sql_query(body["choices"][0]["message"]["content"])
@@ -311,13 +324,15 @@ def generate_and_execute(request: QueryRequest):
 
     if not sql_query.lower().startswith("select"):
         logger.warning("Generated SQL is not a SELECT statement.")
-        raise HTTPException(status_code=400, detail="Only SELECT statements are allowed.")
+        raise HTTPException(
+            status_code=400, detail="Only SELECT statements are allowed.")
 
     try:
         conn = db_pool.getconn()
         cur = conn.cursor()
         cur.execute(sql_query)
-        columns = [desc[0] for desc in cur.description] if cur.description else []
+        columns = [desc[0]
+                   for desc in cur.description] if cur.description else []
         rows = cur.fetchall() if cur.description else []
         cur.close()
         db_pool.putconn(conn)
@@ -326,7 +341,8 @@ def generate_and_execute(request: QueryRequest):
 
         results = []
         for row in rows:
-            row_dict = {col: (list(val) if isinstance(val, (list, tuple)) else val) for col, val in zip(columns, row)}
+            row_dict = {col: (list(val) if isinstance(
+                val, (list, tuple)) else val) for col, val in zip(columns, row)}
             results.append(row_dict)
 
         return results
