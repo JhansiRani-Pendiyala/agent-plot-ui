@@ -13,17 +13,19 @@ FrontEnd
     python app.py
     
  Request Payload to test from postman 
-   curl --location 'http://0.0.0.0:8080/api/query' \
---header 'Content-Type: application/json' \
---data '{
-    "query" :"all employee details along with the total products sold by each emaploye "
+ 
+       curl --location 'http://0.0.0.0:8080/api/query' \
+    --header 'Content-Type: application/json' \
+    --data '{
+        "query" :"all employee details along with the total products sold by each emaploye "
+    
+    }'
 
-}'
 
 promts to load the dahsboard - 
 
- provide total sales by each employee
- all employee details along with the total products sold by each emaploye 
+     provide total sales by each employee
+     all employee details along with the total products sold by each emaploye 
 
 
  
