@@ -80,7 +80,7 @@ def generate_and_execute(request: QueryRequest):
     schema_context = load_all_schema_contexts()
 
     system_prompt = (
-        "You are a helpful assistant that generates exactly one valid PostgreSQL SQL query "
+        "You are a helpful assistant that generates one valid PostgreSQL SQL query  based on best match"
         "based on the schema and user request. " + schema_context
     )
 
@@ -111,7 +111,7 @@ def generate_and_execute(request: QueryRequest):
 
     body = response.json()
     sql_query = extract_sql_query(body["choices"][0]["message"]["content"])
-    logger.info(f"Generated SQL: {sql_query}")
+    logger.info(f"Generated SQL based on User input: {sql_query}")
 
     if not sql_query.lower().startswith("select"):
         logger.warning("Generated SQL is not a SELECT statement.")
