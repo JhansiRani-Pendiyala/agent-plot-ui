@@ -1,1 +1,2689 @@
 
+2025-05-27 13:40:14,227 [INFO] Loaded config.json successfully.
+2025-05-27 13:40:14,253 [ERROR] Failed to create DB pool on startup.
+Traceback (most recent call last):
+  File "/Users/guruchetan/Documents/Gen AI Projects/agent-plot-ui/backend/main.py", line 82, in startup_event
+    db_pool = psycopg2.pool.SimpleConnectionPool(
+        minconn=1,
+    ...<5 lines>...
+        password=DB_PASSWORD
+    )
+  File "/Users/guruchetan/Documents/Gen AI Projects/agent-plot-ui/.venv/lib/python3.13/site-packages/psycopg2/pool.py", line 59, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "/Users/guruchetan/Documents/Gen AI Projects/agent-plot-ui/.venv/lib/python3.13/site-packages/psycopg2/pool.py", line 63, in _connect
+    conn = psycopg2.connect(*self._args, **self._kwargs)
+  File "/Users/guruchetan/Documents/Gen AI Projects/agent-plot-ui/.venv/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-05-27 13:41:20,032 [INFO] Loaded config.json successfully.
+2025-05-27 13:41:20,058 [INFO] Database connection pool created.
+2025-05-27 13:41:23,517 [INFO] Received query: all employee details along with the total products sold by each emaploye 
+2025-05-27 13:41:23,518 [INFO] Loaded 2 schema files.
+2025-05-27 13:41:33,174 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-27 13:41:33,180 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-29 14:27:16,405 [INFO] Loaded config.json successfully.
+2025-05-29 14:27:16,475 [INFO] Database connection pool created.
+2025-05-29 14:28:12,791 [INFO] Received query: all employee details along with the total products sold by each emaploye
+2025-05-29 14:28:12,793 [INFO] Loaded 2 schema files.
+2025-05-29 14:28:23,103 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-29 14:28:23,130 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-29 14:29:15,261 [INFO] Received query: all employee details along with the total products sold by each emaploye 
+2025-05-29 14:29:15,262 [INFO] Loaded 2 schema files.
+2025-05-29 14:29:24,312 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date;
+2025-05-29 14:29:24,315 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 12:12:40,209 [INFO] Loaded config.json successfully.
+2025-05-30 12:12:40,385 [INFO] Database connection pool created.
+2025-05-30 12:19:06,950 [INFO] Received query: all employee details along with the total products sold by each emaploye
+2025-05-30 12:19:06,956 [INFO] Loaded 2 schema files.
+2025-05-30 12:19:07,175 [ERROR] OpenAI API request failed: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+2025-05-30 12:21:21,302 [ERROR] Failed to load config.json: Expecting ',' delimiter: line 3 column 5 (char 195)
+2025-05-30 12:21:32,857 [ERROR] Failed to load config.json: Expecting ',' delimiter: line 3 column 5 (char 195)
+2025-05-30 12:22:09,031 [ERROR] Failed to load config.json: Expecting ',' delimiter: line 3 column 5 (char 195)
+2025-05-30 12:23:09,069 [INFO] Loaded config.json successfully.
+2025-05-30 12:23:09,095 [INFO] Database connection pool created.
+2025-05-30 12:23:21,971 [INFO] Received query: all employee details along with the total products sold by each emaploye
+2025-05-30 12:23:21,972 [INFO] Loaded 2 schema files.
+2025-05-30 12:23:22,150 [ERROR] OpenAI API request failed: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+2025-05-30 12:23:26,590 [INFO] Received query: all employee details along with the total products sold by each emaploye
+2025-05-30 12:23:26,591 [INFO] Loaded 2 schema files.
+2025-05-30 12:23:26,767 [ERROR] OpenAI API request failed: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+2025-05-30 12:24:05,575 [INFO] Received query: all employee details along with the total products sold by each emaploye
+2025-05-30 12:24:05,576 [INFO] Loaded 2 schema files.
+2025-05-30 12:24:05,973 [ERROR] OpenAI API request failed: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+2025-05-30 12:31:37,767 [INFO] Loaded config.json successfully.
+2025-05-30 12:31:37,800 [INFO] Database connection pool created.
+2025-05-30 12:31:48,022 [INFO] Received query: all employee details along with the total products sold by each emaploye
+2025-05-30 12:31:48,025 [INFO] Loaded 2 schema files.
+2025-05-30 12:32:00,497 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 12:32:00,530 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 12:36:41,198 [INFO] Received query: all employee details along with the total products sold by each emaploye
+2025-05-30 12:36:41,199 [INFO] Loaded 2 schema files.
+2025-05-30 12:36:49,684 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 12:36:49,686 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 12:37:35,668 [INFO] Received query: show all the employees
+2025-05-30 12:37:35,671 [INFO] Loaded 2 schema files.
+2025-05-30 12:37:36,687 [INFO] Generated SQL: SELECT * FROM employees;
+2025-05-30 12:37:36,688 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 12:37:49,319 [INFO] Received query: show all the employees and product list
+2025-05-30 12:37:49,322 [INFO] Loaded 2 schema files.
+2025-05-30 12:37:51,230 [INFO] Generated SQL: SELECT e.employee_id, e.first_name, e.last_name, s.item_name
+FROM employees e
+LEFT JOIN sales s ON e.employee_id = s.employee_id;
+2025-05-30 12:37:51,231 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 12:38:32,050 [INFO] Received query: show all the employees and product along with sale total by for each employee
+2025-05-30 12:38:32,051 [INFO] Loaded 2 schema files.
+2025-05-30 12:38:37,346 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    s.item_name, 
+    SUM(s.amount) AS total_sales
+FROM 
+    employees e
+JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id, 
+    s.item_name;
+2025-05-30 12:38:37,359 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 12:40:11,833 [INFO] Received query: show all the employees and product along with sale total by for each employee
+2025-05-30 12:40:11,835 [INFO] Loaded 2 schema files.
+2025-05-30 12:40:16,127 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    s.item_name, 
+    SUM(s.amount) AS total_sales
+FROM 
+    employees e
+JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id, 
+    s.item_name;
+2025-05-30 12:40:16,128 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 12:48:30,058 [INFO] Received query: show all the employees and product along with sale total by for each employee start_date:2025-05-20 end_date:2025-05-30
+2025-05-30 12:48:30,059 [INFO] Loaded 2 schema files.
+2025-05-30 12:48:33,910 [INFO] Generated SQL: SELECT e.first_name, e.last_name, s.item_name, SUM(s.amount) as total_sales
+FROM employees e
+JOIN sales s ON e.employee_id = s.employee_id
+WHERE s.sale_date BETWEEN '2025-05-20' AND '2025-05-30'
+GROUP BY e.first_name, e.last_name, s.item_name;
+2025-05-30 12:48:33,919 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 13:36:29,721 [INFO] Loaded config.json successfully.
+2025-05-30 13:36:29,877 [INFO] Database connection pool created.
+2025-05-30 13:37:06,938 [INFO] Received query: provide all employes data along with the sales information
+2025-05-30 13:37:06,940 [INFO] Loaded 2 schema files.
+2025-05-30 13:37:10,268 [INFO] Generated SQL: SELECT e.employee_id, e.first_name, e.last_name, e.created_date, s.id, s.item_name, s.quantity, s.amount, s.sale_date
+FROM employees e
+LEFT JOIN sales s ON e.employee_id = s.employee_id;
+2025-05-30 13:37:10,288 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 13:39:41,063 [INFO] Received query: all employee details along with the total products sold by each emaploye 
+2025-05-30 13:39:41,066 [INFO] Loaded 2 schema files.
+2025-05-30 13:39:51,010 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 13:39:51,020 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 13:40:42,355 [INFO] Received query: all employee details along with the total products sold by each emaploye and product details 
+2025-05-30 13:40:42,359 [INFO] Loaded 2 schema files.
+2025-05-30 13:40:46,616 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    s.item_name, 
+    SUM(s.quantity) AS total_products_sold
+FROM 
+    employees e
+JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id, s.item_name;
+2025-05-30 13:40:46,620 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 13:41:17,915 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 13:41:17,916 [INFO] Loaded 2 schema files.
+2025-05-30 13:41:21,843 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 13:41:21,851 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 13:41:37,217 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 13:41:37,218 [INFO] Loaded 2 schema files.
+2025-05-30 13:41:40,538 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 13:41:40,540 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 13:42:53,018 [INFO] Received query: provide all employes data along with the sales information
+2025-05-30 13:42:53,021 [INFO] Loaded 2 schema files.
+2025-05-30 13:42:59,024 [INFO] Generated SQL: SELECT e.employee_id, e.first_name, e.last_name, e.created_date, s.id, s.item_name, s.quantity, s.amount, s.sale_date
+FROM employees e
+LEFT JOIN sales s ON e.employee_id = s.employee_id;
+2025-05-30 13:42:59,026 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 13:43:16,749 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 13:43:16,751 [INFO] Loaded 2 schema files.
+2025-05-30 13:43:20,931 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 13:43:20,937 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 13:44:10,547 [INFO] Received query: provide all employes data along with the sales information
+2025-05-30 13:44:10,550 [INFO] Loaded 2 schema files.
+2025-05-30 13:44:13,181 [INFO] Generated SQL: SELECT e.employee_id, e.first_name, e.last_name, e.created_date, s.id, s.item_name, s.quantity, s.amount, s.sale_date
+FROM employees e
+LEFT JOIN sales s ON e.employee_id = s.employee_id;
+2025-05-30 13:44:13,183 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 13:46:16,436 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 13:46:16,441 [INFO] Loaded 2 schema files.
+2025-05-30 13:46:21,884 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 13:46:21,886 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 13:49:54,811 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 13:49:54,813 [INFO] Loaded 2 schema files.
+2025-05-30 13:49:58,218 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 13:49:58,220 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 13:50:45,420 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 13:50:45,423 [INFO] Loaded 2 schema files.
+2025-05-30 13:50:49,463 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 13:50:49,465 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 13:51:10,954 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 13:51:10,955 [INFO] Loaded 2 schema files.
+2025-05-30 13:51:14,143 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 13:51:14,148 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 13:51:33,121 [INFO] Received query: total sale by each employee
+2025-05-30 13:51:33,122 [INFO] Loaded 2 schema files.
+2025-05-30 13:51:39,846 [INFO] Generated SQL: SELECT 
+    e.first_name, 
+    e.last_name, 
+    SUM(s.amount) AS total_sales
+FROM 
+    employees e
+JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.first_name, 
+    e.last_name;
+2025-05-30 13:51:39,850 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 13:54:54,557 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 13:54:54,560 [INFO] Loaded 2 schema files.
+2025-05-30 13:54:59,025 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 13:54:59,029 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 14:01:39,863 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 14:01:39,868 [INFO] Loaded 2 schema files.
+2025-05-30 14:01:40,552 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 14:01:40,552 [INFO] Loaded 2 schema files.
+2025-05-30 14:01:44,436 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 14:01:44,439 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 14:01:45,049 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 14:01:45,051 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 14:07:27,165 [INFO] Received query: pip install dash-bootstrap-components
+
+2025-05-30 14:07:27,168 [INFO] Loaded 2 schema files.
+2025-05-30 14:07:31,457 [INFO] Generated SQL: I'm sorry, but your request seems to be a command for installing a Python library (dash-bootstrap-components) using pip, which is not related to SQL or PostgreSQL. Could you please provide a valid request related to SQL or PostgreSQL?
+2025-05-30 14:07:31,457 [WARNING] Generated SQL is not a SELECT statement.
+2025-05-30 14:07:42,536 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 14:07:42,537 [INFO] Loaded 2 schema files.
+2025-05-30 14:07:46,022 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 14:07:46,025 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 14:40:29,195 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 14:40:29,198 [INFO] Loaded 2 schema files.
+2025-05-30 14:40:34,616 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 14:40:34,640 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 14:41:36,230 [INFO] Received query: total employee
+2025-05-30 14:41:36,234 [INFO] Loaded 2 schema files.
+2025-05-30 14:41:37,386 [INFO] Generated SQL: SELECT COUNT(*) AS total_employee
+FROM employees;
+2025-05-30 14:41:37,390 [INFO] Query executed successfully. Returned 1 rows.
+2025-05-30 14:42:36,209 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 14:42:36,210 [INFO] Loaded 2 schema files.
+2025-05-30 14:42:39,238 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 14:42:39,240 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 15:04:21,724 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 15:04:21,726 [INFO] Loaded 2 schema files.
+2025-05-30 15:04:24,678 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 15:04:24,682 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:09:36,905 [INFO] Received query: provide all the products along with the sale
+2025-05-30 16:09:36,909 [INFO] Loaded 2 schema files.
+2025-05-30 16:09:42,741 [INFO] Generated SQL: SELECT 
+    s.item_name, 
+    s.quantity, 
+    s.amount, 
+    s.sale_date, 
+    e.first_name, 
+    e.last_name 
+FROM 
+    sales s 
+JOIN 
+    employees e 
+ON 
+    s.employee_id = e.employee_id;
+2025-05-30 16:09:42,762 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 16:09:51,389 [INFO] Received query: provide all the products along with the sale
+2025-05-30 16:09:51,391 [INFO] Loaded 2 schema files.
+2025-05-30 16:09:57,484 [INFO] Generated SQL: SELECT 
+    s.item_name, 
+    s.quantity, 
+    s.amount, 
+    s.sale_date, 
+    e.first_name, 
+    e.last_name 
+FROM 
+    sales s 
+JOIN 
+    employees e 
+ON 
+    s.employee_id = e.employee_id;
+2025-05-30 16:09:57,486 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 16:10:10,671 [INFO] Received query: total employee
+2025-05-30 16:10:10,673 [INFO] Loaded 2 schema files.
+2025-05-30 16:10:11,923 [INFO] Generated SQL: SELECT COUNT(*) AS total_employee
+FROM employees;
+2025-05-30 16:10:11,928 [INFO] Query executed successfully. Returned 1 rows.
+2025-05-30 16:15:49,048 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 16:15:49,049 [INFO] Loaded 2 schema files.
+2025-05-30 16:15:52,410 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 16:15:52,416 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:21:02,250 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 16:21:02,253 [INFO] Loaded 2 schema files.
+2025-05-30 16:21:05,770 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 16:21:05,795 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:21:40,181 [INFO] Received query: provide all employee information
+2025-05-30 16:21:40,184 [INFO] Loaded 2 schema files.
+2025-05-30 16:21:41,166 [INFO] Generated SQL: SELECT * FROM employees;
+2025-05-30 16:21:41,168 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:24:33,703 [INFO] Received query: total employee
+2025-05-30 16:24:33,705 [INFO] Loaded 2 schema files.
+2025-05-30 16:24:38,152 [INFO] Generated SQL: SELECT COUNT(*) AS total_employee
+FROM employees;
+2025-05-30 16:24:38,154 [INFO] Query executed successfully. Returned 1 rows.
+2025-05-30 16:24:58,580 [INFO] Received query: total employee and sales
+2025-05-30 16:24:58,581 [INFO] Loaded 2 schema files.
+2025-05-30 16:25:01,190 [INFO] Generated SQL: SELECT 
+    (SELECT COUNT(*) FROM employees) AS total_employees, 
+    (SELECT COUNT(*) FROM sales) AS total_sales;
+2025-05-30 16:25:01,194 [INFO] Query executed successfully. Returned 1 rows.
+2025-05-30 16:25:39,631 [INFO] Received query: provide all employee details 
+2025-05-30 16:25:39,632 [INFO] Loaded 2 schema files.
+2025-05-30 16:25:40,207 [INFO] Generated SQL: SELECT * FROM employees;
+2025-05-30 16:25:40,208 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:26:04,034 [INFO] Received query: provide all employee details  and product details
+2025-05-30 16:26:04,036 [INFO] Loaded 2 schema files.
+2025-05-30 16:26:08,486 [INFO] Generated SQL: SELECT e.employee_id, e.first_name, e.last_name, e.created_date, s.id, s.item_name, s.quantity, s.amount, s.sale_date
+FROM employees e
+JOIN sales s ON e.employee_id = s.employee_id;
+2025-05-30 16:26:08,489 [INFO] Query executed successfully. Returned 21 rows.
+2025-05-30 16:26:22,871 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 16:26:22,872 [INFO] Loaded 2 schema files.
+2025-05-30 16:26:25,691 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 16:26:25,692 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:29:24,212 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 16:29:24,214 [INFO] Loaded 2 schema files.
+2025-05-30 16:29:36,349 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 16:29:36,351 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:40:35,846 [INFO] Received query: 
+2025-05-30 16:40:35,853 [INFO] Loaded 2 schema files.
+2025-05-30 16:40:37,871 [INFO] Generated SQL: You didn't provide a specific request. Could you please provide more details? For example, are you looking to select certain data, update records, delete records, or something else?
+2025-05-30 16:40:37,871 [WARNING] Generated SQL is not a SELECT statement.
+2025-05-30 16:41:03,369 [INFO] Received query: provide all employee information
+2025-05-30 16:41:03,371 [INFO] Loaded 2 schema files.
+2025-05-30 16:41:04,467 [INFO] Received query: provide all employee information
+2025-05-30 16:41:04,469 [INFO] Loaded 2 schema files.
+2025-05-30 16:41:04,492 [INFO] Generated SQL: SELECT * FROM employees;
+2025-05-30 16:41:04,500 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:41:05,313 [INFO] Generated SQL: SELECT * FROM employees;
+2025-05-30 16:41:05,316 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:41:06,173 [INFO] Received query: 
+2025-05-30 16:41:06,174 [INFO] Loaded 2 schema files.
+2025-05-30 16:41:10,644 [INFO] Generated SQL: You didn't provide a specific request. Could you please provide more details? For example, are you looking to select certain data, update records, delete records, or something else?
+2025-05-30 16:41:10,644 [WARNING] Generated SQL is not a SELECT statement.
+2025-05-30 16:41:23,334 [INFO] Received query: total sales information
+2025-05-30 16:41:23,336 [INFO] Loaded 2 schema files.
+2025-05-30 16:41:25,079 [INFO] Generated SQL: SELECT COUNT(*) AS total_sales, SUM(amount) AS total_amount
+FROM sales;
+2025-05-30 16:41:25,081 [INFO] Query executed successfully. Returned 1 rows.
+2025-05-30 16:41:52,419 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 16:41:52,421 [INFO] Loaded 2 schema files.
+2025-05-30 16:41:56,314 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 16:41:56,317 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:42:54,461 [INFO] Received query: 
+2025-05-30 16:42:54,464 [INFO] Loaded 2 schema files.
+2025-05-30 16:42:56,129 [INFO] Generated SQL: Apologies, but your request seems to be incomplete. Could you please provide more details about the SQL query you need?
+2025-05-30 16:42:56,129 [WARNING] Generated SQL is not a SELECT statement.
+2025-05-30 16:42:57,050 [INFO] Received query: 
+2025-05-30 16:42:57,050 [INFO] Loaded 2 schema files.
+2025-05-30 16:42:59,146 [INFO] Generated SQL: You didn't provide a specific request. Could you please provide more details? For example, are you looking to select certain data, insert new data, update existing data, or delete data?
+2025-05-30 16:42:59,146 [WARNING] Generated SQL is not a SELECT statement.
+2025-05-30 16:50:42,691 [INFO] Received query: provide all employee information
+2025-05-30 16:50:42,693 [INFO] Loaded 2 schema files.
+2025-05-30 16:50:43,789 [INFO] Generated SQL: SELECT * FROM employees;
+2025-05-30 16:50:43,791 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:50:51,689 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 16:50:51,691 [INFO] Loaded 2 schema files.
+2025-05-30 16:50:55,260 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 16:50:55,263 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:51:57,620 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 16:51:57,621 [INFO] Loaded 2 schema files.
+2025-05-30 16:52:00,491 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 16:52:00,493 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:53:43,439 [INFO] Received query: provide all employee information
+2025-05-30 16:53:43,441 [INFO] Loaded 2 schema files.
+2025-05-30 16:53:44,175 [INFO] Generated SQL: SELECT * FROM employees;
+2025-05-30 16:53:44,177 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 16:53:57,909 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 16:53:57,910 [INFO] Loaded 2 schema files.
+2025-05-30 16:54:01,633 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 16:54:01,635 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 17:04:04,856 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 17:04:04,858 [INFO] Loaded 2 schema files.
+2025-05-30 17:04:08,125 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 17:04:08,128 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 17:05:39,774 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 17:05:39,776 [INFO] Loaded 2 schema files.
+2025-05-30 17:05:42,788 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 17:05:42,791 [INFO] Query executed successfully. Returned 5 rows.
+2025-05-30 20:45:31,153 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-05-30 20:45:31,157 [INFO] Loaded 2 schema files.
+2025-05-30 20:45:35,156 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-05-30 20:45:35,185 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 09:08:35,985 [INFO] Loaded config.json successfully.
+2025-06-02 09:08:36,057 [INFO] Database connection pool created.
+2025-06-02 09:12:00,180 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 09:12:00,182 [INFO] Loaded 2 schema files.
+2025-06-02 09:12:04,002 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 09:12:04,036 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 09:12:31,174 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 09:12:31,175 [INFO] Loaded 2 schema files.
+2025-06-02 09:12:35,778 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 09:12:35,782 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 09:12:51,592 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 09:12:51,593 [INFO] Loaded 2 schema files.
+2025-06-02 09:12:55,029 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 09:12:55,031 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 10:12:19,465 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 10:12:19,467 [INFO] Loaded 2 schema files.
+2025-06-02 10:12:22,812 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 10:12:22,834 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 10:32:00,811 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 10:32:00,816 [INFO] Loaded 2 schema files.
+2025-06-02 10:32:04,709 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 10:32:04,730 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 10:35:40,247 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 10:35:40,249 [INFO] Loaded 2 schema files.
+2025-06-02 10:35:43,746 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 10:35:43,750 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 10:37:44,758 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 10:37:44,759 [INFO] Loaded 2 schema files.
+2025-06-02 10:37:49,449 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 10:37:49,451 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 10:56:32,541 [INFO] Received query: 
+2025-06-02 10:56:32,543 [INFO] Loaded 2 schema files.
+2025-06-02 10:56:33,113 [INFO] Received query: 
+2025-06-02 10:56:33,115 [INFO] Loaded 2 schema files.
+2025-06-02 10:56:34,936 [INFO] Generated SQL: Sure, I can help with that. However, you didn't provide any specific request. Could you please provide more details about the data you want to retrieve or the operation you want to perform?
+2025-06-02 10:56:34,936 [WARNING] Generated SQL is not a SELECT statement.
+2025-06-02 10:56:35,610 [INFO] Generated SQL: You didn't provide a specific request. Could you please provide more details? For example, are you looking to select, insert, update, or delete data? What specific data are you interested in?
+2025-06-02 10:56:35,610 [WARNING] Generated SQL is not a SELECT statement.
+2025-06-02 11:08:09,518 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 11:08:09,521 [INFO] Loaded 2 schema files.
+2025-06-02 11:08:12,866 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 11:08:12,868 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 11:11:03,349 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 11:11:03,351 [INFO] Loaded 2 schema files.
+2025-06-02 11:11:07,103 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 11:11:07,104 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 11:26:14,748 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 11:26:14,749 [INFO] Loaded 2 schema files.
+2025-06-02 11:26:19,454 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 11:26:19,457 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 12:02:35,089 [INFO] Loaded config.json successfully.
+2025-06-02 12:02:35,137 [INFO] Database connection pool created.
+2025-06-02 12:25:30,901 [INFO] Received query: 
+2025-06-02 12:25:30,903 [INFO] Loaded 2 schema files.
+2025-06-02 12:25:33,043 [INFO] Generated SQL: Sure, I can help with that. However, you didn't provide any specific request. Could you please provide more details about the data you want to retrieve or the operation you want to perform?
+2025-06-02 12:25:33,043 [WARNING] Generated SQL is not a SELECT statement.
+2025-06-02 12:25:34,997 [INFO] Received query: 
+2025-06-02 12:25:34,998 [INFO] Loaded 2 schema files.
+2025-06-02 12:25:39,565 [INFO] Generated SQL: You didn't provide a specific request. Could you please provide more details? For example, are you looking to select certain data, update records, delete records, or something else?
+2025-06-02 12:25:39,565 [WARNING] Generated SQL is not a SELECT statement.
+2025-06-02 12:26:43,057 [INFO] Received query: 
+2025-06-02 12:26:43,058 [INFO] Loaded 2 schema files.
+2025-06-02 12:26:46,050 [INFO] Generated SQL: Sure, I can help with that. However, you didn't provide any specific request. Could you please provide more details about the data you want to retrieve or the operation you want to perform?
+2025-06-02 12:26:46,051 [WARNING] Generated SQL is not a SELECT statement.
+2025-06-02 12:26:54,706 [INFO] Received query: 
+2025-06-02 12:26:54,707 [INFO] Loaded 2 schema files.
+2025-06-02 12:26:57,281 [INFO] Generated SQL: Sure, I can help with that. However, you didn't provide any specific request. Could you please provide more details about the data you want to retrieve or the operation you want to perform?
+2025-06-02 12:26:57,281 [WARNING] Generated SQL is not a SELECT statement.
+2025-06-02 12:27:18,925 [INFO] Received query: 
+2025-06-02 12:27:18,927 [INFO] Loaded 2 schema files.
+2025-06-02 12:27:21,073 [INFO] Generated SQL: Sure, I can help with that. However, you didn't provide any specific request. Could you please provide more details about the data you want to retrieve or the operation you want to perform?
+2025-06-02 12:27:21,073 [WARNING] Generated SQL is not a SELECT statement.
+2025-06-02 13:21:53,734 [INFO] Received query: 
+2025-06-02 13:21:53,736 [INFO] Loaded 2 schema files.
+2025-06-02 13:21:56,682 [INFO] Generated SQL: Sure, I can help with that. However, you didn't provide any specific request. Could you please provide more details about the data you want to retrieve or the operation you want to perform?
+2025-06-02 13:21:56,682 [WARNING] Generated SQL is not a SELECT statement.
+2025-06-02 13:42:24,671 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:42:24,674 [INFO] Loaded 2 schema files.
+2025-06-02 13:42:30,708 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:42:30,743 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:45:05,570 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:45:05,571 [INFO] Loaded 2 schema files.
+2025-06-02 13:45:09,116 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:45:09,118 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:45:54,172 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:45:54,172 [INFO] Loaded 2 schema files.
+2025-06-02 13:45:58,576 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:45:58,577 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:47:20,336 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:47:20,336 [INFO] Loaded 2 schema files.
+2025-06-02 13:47:23,261 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:47:23,262 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:47:44,251 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:47:44,251 [INFO] Loaded 2 schema files.
+2025-06-02 13:47:48,554 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:47:48,555 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:48:02,234 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:48:02,235 [INFO] Loaded 2 schema files.
+2025-06-02 13:48:05,657 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:48:05,658 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:48:17,148 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:48:17,148 [INFO] Loaded 2 schema files.
+2025-06-02 13:48:21,016 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:48:21,018 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:48:37,436 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:48:37,436 [INFO] Loaded 2 schema files.
+2025-06-02 13:48:40,780 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:48:40,782 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:48:58,602 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:48:58,602 [INFO] Loaded 2 schema files.
+2025-06-02 13:49:03,912 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:49:03,914 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:49:28,896 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:49:28,897 [INFO] Loaded 2 schema files.
+2025-06-02 13:49:32,391 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:49:32,394 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:50:49,934 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:50:49,935 [INFO] Loaded 2 schema files.
+2025-06-02 13:50:54,310 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:50:54,311 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:51:05,984 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:51:05,984 [INFO] Loaded 2 schema files.
+2025-06-02 13:51:11,303 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:51:11,304 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:52:50,272 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:52:50,274 [INFO] Loaded 2 schema files.
+2025-06-02 13:52:53,503 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:52:53,505 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:53:57,230 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:53:57,231 [INFO] Loaded 2 schema files.
+2025-06-02 13:54:02,317 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:54:02,319 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:54:16,553 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:54:16,553 [INFO] Loaded 2 schema files.
+2025-06-02 13:54:20,860 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:54:20,861 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:54:37,378 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:54:37,379 [INFO] Loaded 2 schema files.
+2025-06-02 13:54:40,822 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:54:40,824 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:55:35,741 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:55:35,742 [INFO] Loaded 2 schema files.
+2025-06-02 13:55:39,599 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:55:39,602 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:57:14,080 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:57:14,082 [INFO] Loaded 2 schema files.
+2025-06-02 13:57:17,188 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:57:17,190 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:57:36,460 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:57:36,462 [INFO] Loaded 2 schema files.
+2025-06-02 13:57:40,639 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:57:40,641 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:58:08,760 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:58:08,761 [INFO] Loaded 2 schema files.
+2025-06-02 13:58:13,405 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:58:13,407 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 13:59:20,647 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 13:59:20,650 [INFO] Loaded 2 schema files.
+2025-06-02 13:59:24,699 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 13:59:24,701 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 14:00:37,943 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:00:37,945 [INFO] Loaded 2 schema files.
+2025-06-02 14:00:41,541 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:00:41,543 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 14:00:56,912 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:00:56,913 [INFO] Loaded 2 schema files.
+2025-06-02 14:01:00,831 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:01:00,834 [INFO] Query executed successfully. Returned 5 rows.
+2025-06-02 14:32:12,512 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:32:12,515 [INFO] Loaded 2 schema files.
+2025-06-02 14:32:16,811 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:32:16,825 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 14:32:33,826 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:32:33,827 [INFO] Loaded 2 schema files.
+2025-06-02 14:32:38,117 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:32:38,127 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 14:35:55,284 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:35:55,290 [INFO] Loaded 2 schema files.
+2025-06-02 14:35:59,329 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:35:59,343 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 14:37:43,306 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:37:43,307 [INFO] Loaded 2 schema files.
+2025-06-02 14:37:47,789 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:37:47,803 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 14:38:25,462 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:38:25,465 [INFO] Loaded 2 schema files.
+2025-06-02 14:38:28,630 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:38:28,642 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 14:38:37,976 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:38:37,977 [INFO] Loaded 2 schema files.
+2025-06-02 14:38:41,839 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:38:41,854 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 14:38:45,826 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:38:45,828 [INFO] Loaded 2 schema files.
+2025-06-02 14:38:49,927 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:38:49,937 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 14:39:14,481 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:39:14,483 [INFO] Loaded 2 schema files.
+2025-06-02 14:39:17,987 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:39:18,002 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 14:39:49,376 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 14:39:49,379 [INFO] Loaded 2 schema files.
+2025-06-02 14:39:53,213 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 14:39:53,226 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:14:10,106 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:14:10,109 [INFO] Loaded 2 schema files.
+2025-06-02 15:14:14,380 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:14:14,397 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:14:15,749 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:14:15,749 [INFO] Loaded 2 schema files.
+2025-06-02 15:14:20,329 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:14:20,338 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:15:14,043 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:15:14,045 [INFO] Loaded 2 schema files.
+2025-06-02 15:15:19,180 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:15:19,197 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:20:21,359 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:20:21,361 [INFO] Loaded 2 schema files.
+2025-06-02 15:20:25,520 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:20:25,532 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:21:49,470 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:21:49,471 [INFO] Loaded 2 schema files.
+2025-06-02 15:21:54,075 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:21:54,087 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:21:54,654 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:21:54,655 [INFO] Loaded 2 schema files.
+2025-06-02 15:21:58,519 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:21:58,528 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:23:45,848 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:23:45,850 [INFO] Loaded 2 schema files.
+2025-06-02 15:23:49,026 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:23:49,037 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:25:15,254 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:25:15,255 [INFO] Loaded 2 schema files.
+2025-06-02 15:25:18,264 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:25:18,274 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:25:42,657 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:25:42,658 [INFO] Loaded 2 schema files.
+2025-06-02 15:25:46,528 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:25:46,537 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:26:35,239 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:26:35,240 [INFO] Loaded 2 schema files.
+2025-06-02 15:26:39,574 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:26:39,587 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:28:28,008 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:28:28,009 [INFO] Loaded 2 schema files.
+2025-06-02 15:28:31,352 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:28:31,361 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:31:46,275 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:31:46,276 [INFO] Loaded 2 schema files.
+2025-06-02 15:31:49,547 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:31:49,562 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:34:52,999 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:34:53,001 [INFO] Loaded 2 schema files.
+2025-06-02 15:34:57,351 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:34:57,365 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:39:27,053 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:39:27,056 [INFO] Loaded 2 schema files.
+2025-06-02 15:39:31,275 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:39:31,287 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:43:00,488 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:43:00,492 [INFO] Loaded 2 schema files.
+2025-06-02 15:43:03,965 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:43:03,985 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 15:50:22,246 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 15:50:22,249 [INFO] Loaded 2 schema files.
+2025-06-02 15:50:26,953 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 15:50:26,967 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:01:52,283 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:01:52,284 [INFO] Loaded 2 schema files.
+2025-06-02 16:01:56,587 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:01:56,604 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:03:58,624 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:03:58,624 [INFO] Loaded 2 schema files.
+2025-06-02 16:04:03,464 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:04:03,478 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:04:37,348 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:04:37,352 [INFO] Loaded 2 schema files.
+2025-06-02 16:04:41,950 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:04:41,969 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:05:41,146 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:05:41,146 [INFO] Loaded 2 schema files.
+2025-06-02 16:05:44,368 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:05:44,380 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:06:43,968 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:06:43,971 [INFO] Loaded 2 schema files.
+2025-06-02 16:06:48,470 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:06:48,486 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:07:30,935 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:07:30,936 [INFO] Loaded 2 schema files.
+2025-06-02 16:07:34,551 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:07:34,560 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:08:55,344 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:08:55,346 [INFO] Loaded 2 schema files.
+2025-06-02 16:08:58,877 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:08:58,887 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:10:35,918 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:10:35,919 [INFO] Loaded 2 schema files.
+2025-06-02 16:10:40,003 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:10:40,016 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:11:31,940 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:11:31,941 [INFO] Loaded 2 schema files.
+2025-06-02 16:11:36,116 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:11:36,126 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:13:32,543 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:13:32,545 [INFO] Loaded 2 schema files.
+2025-06-02 16:13:36,544 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:13:36,559 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:14:10,025 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:14:10,027 [INFO] Loaded 2 schema files.
+2025-06-02 16:14:13,254 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:14:13,266 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:14:29,910 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:14:29,912 [INFO] Loaded 2 schema files.
+2025-06-02 16:14:33,578 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:14:33,591 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:15:06,044 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:15:06,045 [INFO] Loaded 2 schema files.
+2025-06-02 16:15:06,787 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:15:06,787 [INFO] Loaded 2 schema files.
+2025-06-02 16:15:09,793 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:15:09,805 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:15:10,397 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:15:10,409 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:15:58,471 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:15:58,472 [INFO] Loaded 2 schema files.
+2025-06-02 16:16:03,180 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:16:03,194 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:16:39,763 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:16:39,765 [INFO] Loaded 2 schema files.
+2025-06-02 16:16:44,038 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:16:44,050 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:17:12,192 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:17:12,193 [INFO] Loaded 2 schema files.
+2025-06-02 16:17:16,259 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold,
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:17:16,269 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:18:05,317 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-02 16:18:05,318 [INFO] Loaded 2 schema files.
+2025-06-02 16:18:09,340 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:18:09,351 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:20:35,198 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sold amount
+2025-06-02 16:20:35,204 [INFO] Loaded 2 schema files.
+2025-06-02 16:20:40,074 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sold_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:20:40,089 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:23:52,830 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:23:52,832 [INFO] Loaded 2 schema files.
+2025-06-02 16:23:57,399 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:23:57,419 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:25:25,495 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:25:25,496 [INFO] Loaded 2 schema files.
+2025-06-02 16:25:30,384 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:25:30,401 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:27:42,374 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:27:42,375 [INFO] Loaded 2 schema files.
+2025-06-02 16:27:48,421 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:27:48,435 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:28:58,480 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:28:58,481 [INFO] Loaded 2 schema files.
+2025-06-02 16:29:02,352 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:29:02,364 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:30:39,345 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:30:39,346 [INFO] Loaded 2 schema files.
+2025-06-02 16:30:43,014 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:30:43,025 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:31:08,323 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:31:08,325 [INFO] Loaded 2 schema files.
+2025-06-02 16:31:13,836 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:31:13,850 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:32:57,513 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:32:57,514 [INFO] Loaded 2 schema files.
+2025-06-02 16:33:01,975 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:33:01,989 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:33:27,385 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:33:27,386 [INFO] Loaded 2 schema files.
+2025-06-02 16:33:33,436 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:33:33,448 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:34:32,478 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:34:32,480 [INFO] Loaded 2 schema files.
+2025-06-02 16:34:37,856 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:34:37,871 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:37:48,464 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:37:48,465 [INFO] Loaded 2 schema files.
+2025-06-02 16:37:53,002 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:37:53,021 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:41:27,799 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount
+2025-06-02 16:41:27,801 [INFO] Loaded 2 schema files.
+2025-06-02 16:41:32,296 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:41:32,311 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-02 16:53:13,227 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount 2025-05-01 2025-05-08
+2025-06-02 16:53:13,229 [INFO] Loaded 2 schema files.
+2025-06-02 16:53:19,384 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-05-08'
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:53:19,391 [INFO] Query executed successfully. Returned 0 rows.
+2025-06-02 16:53:59,281 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount 2025-05-01 2025-06-13
+2025-06-02 16:53:59,282 [INFO] Loaded 2 schema files.
+2025-06-02 16:54:03,720 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-06-13'
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:54:03,735 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-02 16:55:15,512 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount 2025-05-01 2025-06-21
+2025-06-02 16:55:15,514 [INFO] Loaded 2 schema files.
+2025-06-02 16:55:22,656 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-06-21'
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:55:22,673 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-02 16:56:20,899 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount from 2025-05-01 to 2025-05-15
+2025-06-02 16:56:20,900 [INFO] Loaded 2 schema files.
+2025-06-02 16:56:26,086 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-05-15'
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:56:26,089 [INFO] Query executed successfully. Returned 0 rows.
+2025-06-02 16:57:05,416 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount from 2025-05-15 to 2025-05-31
+2025-06-02 16:57:05,420 [INFO] Loaded 2 schema files.
+2025-06-02 16:57:07,731 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sales amount from 2025-05-15 to 2025-05-31
+2025-06-02 16:57:07,732 [INFO] Loaded 2 schema files.
+2025-06-02 16:57:10,651 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-15' AND '2025-05-31'
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:57:10,668 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-02 16:57:13,495 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sales_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-15' AND '2025-05-31'
+GROUP BY 
+    e.employee_id;
+2025-06-02 16:57:13,514 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-02 17:04:13,746 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sold amount from 2025-06-01
+2025-06-02 17:04:13,747 [INFO] Loaded 2 schema files.
+2025-06-02 17:04:19,508 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sold_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date >= '2025-06-01'
+GROUP BY 
+    e.employee_id;
+2025-06-02 17:04:19,512 [INFO] Query executed successfully. Returned 0 rows.
+2025-06-03 08:56:30,186 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01
+2025-06-03 08:56:30,189 [INFO] Loaded 2 schema files.
+2025-06-03 08:56:35,316 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date >= '2025-05-01'
+GROUP BY 
+    e.employee_id;
+2025-06-03 08:56:35,331 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 08:58:17,855 [INFO] Received query: provide all employee information from 2025-05-01 to 2025-06-30
+2025-06-03 08:58:17,856 [INFO] Loaded 2 schema files.
+2025-06-03 08:58:26,290 [INFO] Generated SQL: SELECT *
+FROM employees
+WHERE created_date BETWEEN '2025-05-01' AND '2025-06-30';
+2025-06-03 08:58:26,294 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-03 08:59:01,357 [INFO] Received query: total product sale for last 3 months from 2025-05-01 to 2025-06-30
+2025-06-03 08:59:01,358 [INFO] Loaded 2 schema files.
+2025-06-03 08:59:04,412 [INFO] Generated SQL: SELECT SUM(amount) AS total_sales
+FROM sales
+WHERE sale_date BETWEEN '2025-05-01' AND '2025-06-30';
+2025-06-03 08:59:04,416 [INFO] Query executed successfully. Returned 1 rows.
+2025-06-03 08:59:51,758 [INFO] Received query: total product sale for last 3 months
+2025-06-03 08:59:51,760 [INFO] Loaded 2 schema files.
+2025-06-03 08:59:54,588 [INFO] Generated SQL: SELECT SUM(amount) AS total_sales
+FROM sales
+WHERE sale_date >= (CURRENT_DATE - INTERVAL '3 months');
+2025-06-03 08:59:54,594 [INFO] Query executed successfully. Returned 1 rows.
+2025-06-03 09:00:12,011 [INFO] Received query: total sale by each product for last 3 months
+2025-06-03 09:00:12,013 [INFO] Loaded 2 schema files.
+2025-06-03 09:00:16,668 [INFO] Generated SQL: SELECT 
+    item_name, 
+    SUM(quantity) AS total_quantity, 
+    SUM(amount) AS total_amount 
+FROM 
+    sales 
+WHERE 
+    sale_date >= (CURRENT_DATE - INTERVAL '3 months') 
+GROUP BY 
+    item_name;
+2025-06-03 09:00:16,675 [INFO] Query executed successfully. Returned 25 rows.
+2025-06-03 09:08:02,637 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list and sold amount from 2025-05-01 to 2025-06-30
+2025-06-03 09:08:02,641 [INFO] Loaded 2 schema files.
+2025-06-03 09:08:08,238 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list, 
+    SUM(s.amount) AS total_sold_amount
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-06-30'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:08:08,258 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:09:55,995 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list
+2025-06-03 09:09:55,997 [INFO] Loaded 2 schema files.
+2025-06-03 09:09:59,580 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:09:59,593 [INFO] Query executed successfully. Returned 1000 rows.
+2025-06-03 09:13:39,766 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-05-30
+2025-06-03 09:13:39,771 [INFO] Loaded 2 schema files.
+2025-06-03 09:13:47,735 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-05-30'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:13:47,749 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:16:12,390 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-05-02
+2025-06-03 09:16:12,391 [INFO] Loaded 2 schema files.
+2025-06-03 09:16:17,616 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date >= '2025-05-01' AND s.sale_date < '2025-05-03'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:16:17,623 [INFO] Query executed successfully. Returned 0 rows.
+2025-06-03 09:17:30,857 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-05-02
+2025-06-03 09:17:30,860 [INFO] Loaded 2 schema files.
+2025-06-03 09:17:35,581 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date >= '2025-05-01' AND s.sale_date < '2025-05-03'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:17:35,585 [INFO] Query executed successfully. Returned 0 rows.
+2025-06-03 09:17:52,091 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-05-30
+2025-06-03 09:17:52,093 [INFO] Loaded 2 schema files.
+2025-06-03 09:17:59,746 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-05-30'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:17:59,758 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:18:27,428 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-06-30
+2025-06-03 09:18:27,429 [INFO] Loaded 2 schema files.
+2025-06-03 09:18:34,667 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-06-30'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:18:34,681 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:29:48,615 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-06-01
+2025-06-03 09:29:48,616 [INFO] Loaded 2 schema files.
+2025-06-03 09:29:58,918 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-06-01'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:29:58,935 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:30:49,562 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-06-30
+2025-06-03 09:30:49,563 [INFO] Loaded 2 schema files.
+2025-06-03 09:30:56,159 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-06-30'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:30:56,171 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:31:29,202 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-04-27
+2025-06-03 09:31:29,203 [INFO] Loaded 2 schema files.
+2025-06-03 09:31:33,127 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date::date = '2025-04-27'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:31:33,132 [INFO] Query executed successfully. Returned 0 rows.
+2025-06-03 09:32:01,250 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-04-27 to 2025-05-01
+2025-06-03 09:32:01,251 [INFO] Loaded 2 schema files.
+2025-06-03 09:32:04,431 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-04-27 to 2025-05-30
+2025-06-03 09:32:04,432 [INFO] Loaded 2 schema files.
+2025-06-03 09:32:07,843 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-04-27' AND '2025-05-01'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:32:07,846 [INFO] Query executed successfully. Returned 0 rows.
+2025-06-03 09:32:08,819 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-04-27' AND '2025-05-30'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:32:08,835 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:33:00,469 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-06-01
+2025-06-03 09:33:00,470 [INFO] Loaded 2 schema files.
+2025-06-03 09:33:06,621 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-06-01'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:33:06,636 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:35:54,203 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-06-30
+2025-06-03 09:35:54,204 [INFO] Loaded 2 schema files.
+2025-06-03 09:36:03,674 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-06-30'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:36:03,685 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:36:49,036 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-05-30
+2025-06-03 09:36:49,037 [INFO] Loaded 2 schema files.
+2025-06-03 09:36:57,745 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.id) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-05-30'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:36:57,761 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:38:24,684 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-05-30
+2025-06-03 09:38:24,685 [INFO] Loaded 2 schema files.
+2025-06-03 09:38:29,395 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    COUNT(s.item_name) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-05-30'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:38:29,411 [INFO] Query executed successfully. Returned 999 rows.
+2025-06-03 09:49:58,370 [INFO] Received query: all employee details along with the total products sold by each emaploye and product list from 2025-05-01 to 2025-06-30
+2025-06-03 09:49:58,373 [INFO] Loaded 2 schema files.
+2025-06-03 09:50:03,888 [INFO] Generated SQL: SELECT 
+    e.employee_id, 
+    e.first_name, 
+    e.last_name, 
+    e.created_date, 
+    SUM(s.quantity) AS total_products_sold, 
+    ARRAY_AGG(s.item_name) AS product_list
+FROM 
+    employees e
+LEFT JOIN 
+    sales s ON e.employee_id = s.employee_id
+WHERE 
+    s.sale_date BETWEEN '2025-05-01' AND '2025-06-30'
+GROUP BY 
+    e.employee_id;
+2025-06-03 09:50:03,904 [INFO] Query executed successfully. Returned 999 rows.

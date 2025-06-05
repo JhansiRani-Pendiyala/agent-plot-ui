@@ -1,8 +1,8 @@
 {
-    "OPENAI_API_KEY": "****",
+    "OPENAI_API_KEY": "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",
     "DB_HOST": "localhost",
     "DB_PORT": "5432",
     "DB_NAME": "postgres",
     "DB_USER": "postgres",
-    "DB_PASSWORD": "***"
+    "DB_PASSWORD": "Guru"
 }

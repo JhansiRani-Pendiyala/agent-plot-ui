@@ -1,0 +1,50 @@
+/* assets/style.css */
+
+/* Style the actual input field inside the DatePickerSingle */
+.DateInput_input {
+    height: 38px !important;
+    font-size: 1rem;
+    padding: 4px 12px;
+    background-color: white !important;
+    width: 100%;
+}
+
+/* Optional: Focus state styling */
+.DateInput_input:focus {
+    border-color: "none" !important;
+    outline: 0;
+}
+
+/* Ensure container doesn't collapse or become invisible */
+.SingleDatePicker,
+.SingleDatePickerInput {
+    display: inline-block;  
+    width: 100%;
+}
+.text-light-grey {
+    color: #7d79815f !important;
+}
+
+.text-brand-purple {
+    color: #6f42c1 !important;
+}
+
+
+/* assets/style.css */
+
+.bg-dark-grey {
+    background-color: #5b605f !important;
+    color: #5b605f;
+    border: none;
+}
+
+.info {
+    background-color: lightgray !important;
+    color: #51a49c;
+    border: none;
+}
+.title_success {
+    color: lightgrey !important;
+    background-color: lightgray !important;
+    border: none;
+}
