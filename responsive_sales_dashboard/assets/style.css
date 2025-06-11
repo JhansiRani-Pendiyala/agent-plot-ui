@@ -1,26 +1,76 @@
 /* assets/style.css */
 
-/* Style the actual input field inside the DatePickerSingle */
+/* Base styling for input inside DatePickerSingle */
 .DateInput_input {
     height: 38px !important;
     font-size: 1rem;
-    padding: 4px 12px;
+    padding: 0 !important;           /* Remove padding to rely on container */
+    background-color: transparent !important;
+    width: 100%;
+    border: none !important;
+    color: #495057 !important;
+    display: flex !important;
+    align-items: center !important; /* Vertically center text */
+    box-sizing: border-box !important;
+}
+
+/* Outer container of DatePicker with visible border and padding */
+.DateInput {
+    height: 100px !important;
+    width: 100% !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 4px !important;
     background-color: white !important;
-    width: 100%;
+    box-sizing: border-box !important;
+    padding-left: 10px !important;  /* Horizontal padding for input */
+    display: flex !important;
+    align-items: center !important; /* Vertically center content */
 }
 
-/* Optional: Focus state styling */
-.DateInput_input:focus {
-    border-color: "none" !important;
-    outline: 0;
+/* Focus state with bootstrap blue outline */
+.DateInput--focused {
+    border-color: #0d6efd !important;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25) !important;
 }
 
-/* Ensure container doesn't collapse or become invisible */
+/* Remove background and shadow from calendar icon */
+.DateInput_calendarIcon,
+.SingleDatePickerInput__calendar-icon {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Remove little triangle pointer below calendar input */
+.DateInput_fang {
+    display: none !important;
+}
+
+/* Remove background, border and padding from wrapper elements to avoid double styling */
+.SingleDatePickerInput,
 .SingleDatePicker,
-.SingleDatePickerInput {
-    display: inline-block;  
-    width: 100%;
+.DateInput_input,
+.DateInput {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
 }
+
+/* Then override the DateInput again to have border and background */
+.DateInput {
+    background-color: white !important;
+    border: 1px solid #ced4da !important;
+    padding-left: 10px !important;
+    border-radius: 4px !important;
+    height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+/* Utility colors */
 .text-light-grey {
     color: #7d79815f !important;
 }
@@ -29,22 +79,21 @@
     color: #6f42c1 !important;
 }
 
-
-/* assets/style.css */
-
+/* Background and text color styles */
 .bg-dark-grey {
     background-color: #5b605f !important;
-    color: #5b605f;
-    border: none;
+    color: #5b605f !important;
+    border: none !important;
 }
 
 .info {
     background-color: lightgray !important;
-    color: #51a49c;
-    border: none;
+    color: #51a49c !important;
+    border: none !important;
 }
+
 .title_success {
-    color: lightgrey !important;
     background-color: lightgray !important;
-    border: none;
+    color: lightgrey !important;
+    border: none !important;
 }

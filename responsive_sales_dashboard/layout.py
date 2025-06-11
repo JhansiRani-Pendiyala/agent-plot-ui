@@ -2,15 +2,23 @@ from dash import html, dcc, dash_table
 import plotly.express as px
 import dash_bootstrap_components as dbc
 
-# Shared style for text input
 input_style = {
-    "height": "38px",
+    "height": "38px",  # Same as DateInput_input height in CSS
     "width": "100%",
     "fontSize": "1rem",
     "padding": "6px 12px",
     "border": "1px solid #ced4da",
     "borderRadius": "4px",
-    "backgroundColor": "white"
+    "backgroundColor": "white",
+    "color": "#495057",
+    "boxSizing": "border-box"
+}
+
+button_style = {
+    "height": "38px",
+    "fontSize": "1rem",
+    "width": "100%",
+    "borderRadius": "4px"
 }
 
 layout = dbc.Container([
@@ -24,10 +32,10 @@ layout = dbc.Container([
         )
     ]),
 
-    # Filters
+    # Filters row aligned
     dbc.Row([
         dbc.Col([
-            dbc.Label("Serach Product and Sales information", className="fw-semibold"),
+            dbc.Label("Search Product and Sales information", className="fw-semibold mb-1"),
             dcc.Input(
                 id="search-input",
                 type="text",
@@ -35,35 +43,49 @@ layout = dbc.Container([
                 placeholder="Type your query...",
                 style=input_style
             )
-        ], xs=12, md=4),
+        ], xs=12, md=4, className="d-flex flex-column justify-content-start"),
 
         dbc.Col([
-            dbc.Label("Start Date", className="fw-semibold"),
+            dbc.Label("Start Date", className="fw-semibold mb-1"),
             dcc.DatePickerSingle(
                 id="start-date",
                 display_format="YYYY-MM-DD",
+                style={"width": "100%"}  # input style overridden by CSS now
             )
-        ], xs=6, md=2),
+        ], xs=6, md=2, className="d-flex flex-column justify-content-start"),
 
         dbc.Col([
-            dbc.Label("End Date", className="fw-semibold"),
+            dbc.Label("End Date", className="fw-semibold mb-1"),
             dcc.DatePickerSingle(
                 id="end-date",
-                display_format="YYYY-MM-DD"
+                display_format="YYYY-MM-DD",
+                style={"width": "100%"}
             )
-        ], xs=6, md=2),
+        ], xs=6, md=2, className="d-flex flex-column justify-content-start"),
 
         dbc.Col([
-            dbc.Label(" "),  # space above button
+            dbc.Label("\u00A0", className="mb-1"),  # non-breaking space for alignment
             dbc.Button(
                 "Apply Filters",
                 id="filter-btn",
                 color="primary",
-                className="w-100 fw-semibold",
-                style={"height": "38px", "fontSize": "1rem"}
+                className="fw-semibold",
+                style=button_style
             )
-        ], xs=12, md=2),
-    ], className="mb-4"),
+        ], xs=12, md=2, className="d-flex flex-column justify-content-start"),
+
+        dbc.Col([
+            dbc.Label("\u00A0", className="mb-1"),
+            dbc.Button(
+                "Download CSV",
+                id="download-btn",
+                color="secondary",
+                className="fw-semibold",
+                style=button_style
+            ),
+            dcc.Download(id="download-data")
+        ], xs=12, md=2, className="d-flex flex-column justify-content-start"),
+    ], className="mb-4 align-items-center"),
 
     # KPIs
     dbc.Row([
