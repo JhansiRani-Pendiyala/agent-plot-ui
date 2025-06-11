@@ -32,7 +32,8 @@ prompts to load the dahsboard -
 
 DashBoard
 
-<img width="1440" alt="image" src="https://github.com/user-attachments/assets/cd10482d-a95a-463b-bbc2-3bb3d4da25e7" />
+![image](https://github.com/user-attachments/assets/2beb9266-a7b1-4ff2-b667-9f11d93bcc58)
+
 
 
 
