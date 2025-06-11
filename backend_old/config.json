@@ -3,6 +3,5 @@
     "DB_PORT": "5432",
     "DB_NAME": "postgres",
     "DB_USER": "postgres",
-    "DB_PASSWORD": "Guru",
-    "OPENAI_API_KEY":""
+    "DB_PASSWORD": "Guru"
 }
