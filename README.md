@@ -9,7 +9,7 @@
     
 FrontEnd
 
-    cd responsive_sales_dashboard
+    cd frontend
     
     pip install -r requirements.txt
     
